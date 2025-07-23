@@ -64,16 +64,23 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #f8f8f8;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: 0.5px;
     transition: all 0.3s ease;
 }
 
-.logo:hover {
-    color: #a8a8a8;
+.logo img {
+    height: 35px;
+    width: auto;
+    /* Remove fundo branco e inverte para branco */
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.logo:hover img {
+    filter: brightness(0) invert(0.8);
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -378,6 +385,10 @@ nav {
 @media (max-width: 768px) {
     nav {
         padding: 1rem 2rem;
+    }
+    
+    .logo img {
+        height: 30px;
     }
     
     .nav-links {
