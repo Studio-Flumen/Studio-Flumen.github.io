@@ -119,14 +119,13 @@ nav {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center;
-    margin-bottom: 3rem;
-    gap: 2rem;
+    margin-bottom: 4rem;
     width: 100%;
 }
 
 .hero-logo {
-    width: 180px !important;
-    height: 180px !important;
+    width: 280px !important;
+    height: 280px !important;
     object-fit: contain;
     animation: fadeInUp 1.2s ease;
     transition: all 0.4s ease;
@@ -135,25 +134,32 @@ nav {
     border: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
-    /* Inverte para branco + sombra para máximo contraste */
+    /* Logo branca com glow mais forte para protagonismo */
     filter: brightness(0) invert(1) 
-            drop-shadow(0 0 20px rgba(255, 255, 255, 0.4))
-            drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8))
-            drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6)) !important;
+            drop-shadow(0 0 30px rgba(255, 255, 255, 0.5))
+            drop-shadow(0 0 60px rgba(255, 255, 255, 0.3))
+            drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8)) !important;
 }
 
 .hero-logo:hover {
-    transform: scale(1.08) translateY(-3px);
+    transform: scale(1.05) translateY(-5px);
     filter: brightness(0) invert(1) 
-            drop-shadow(0 0 25px rgba(255, 255, 255, 0.6))
-            drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8))
-            drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6)) !important;
+            drop-shadow(0 0 40px rgba(255, 255, 255, 0.7))
+            drop-shadow(0 0 80px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 8px 30px rgba(0, 0, 0, 0.8)) !important;
 }
 
 @media (min-width: 768px) {
     .hero-logo {
-        width: 200px !important;
-        height: 200px !important;
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo {
+        width: 220px !important;
+        height: 220px !important;
     }
 }
 
@@ -195,12 +201,12 @@ nav {
 }
 
 .tagline {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    margin-bottom: 2rem;
-    opacity: 0.7;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
     font-weight: 300;
     letter-spacing: 1px;
-    animation: fadeInUp 1.2s ease 0.3s both;
+    animation: fadeInUp 1.2s ease 0.2s both;
 }
 
 .description {
@@ -448,17 +454,8 @@ nav {
         font-size: 0.9rem;
     }
     
-    .hero-logo {
-        width: 80px !important;
-        height: 80px !important;
-    }
-    
-    .studio-name {
-        font-size: clamp(2rem, 10vw, 3.5rem) !important;
-    }
-    
     .hero-logo-container {
-        gap: 1rem !important;
+        margin-bottom: 3rem;
     }
     
     .cta-buttons {
