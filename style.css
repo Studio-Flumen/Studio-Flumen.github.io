@@ -135,17 +135,26 @@ nav {
     border: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
-    /* Sombra forte para contraste */
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9)) 
-            drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8))
-            drop-shadow(0 0 30px rgba(0, 0, 0, 0.7)) !important;
+    /* Inverte para branco + sombra para máximo contraste */
+    filter: brightness(0) invert(1) 
+            drop-shadow(0 0 20px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8))
+            drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6)) !important;
 }
 
 .hero-logo:hover {
     transform: scale(1.08) translateY(-3px);
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9)) 
-            drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8))
-            drop-shadow(0 0 40px rgba(0, 0, 0, 0.8)) !important;
+    filter: brightness(0) invert(1) 
+            drop-shadow(0 0 25px rgba(255, 255, 255, 0.6))
+            drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8))
+            drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6)) !important;
+}
+
+@media (min-width: 768px) {
+    .hero-logo {
+        width: 200px !important;
+        height: 200px !important;
+    }
 }
 
 @media (min-width: 768px) {
