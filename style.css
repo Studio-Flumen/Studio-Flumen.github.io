@@ -116,7 +116,7 @@ nav {
 
 .hero-logo-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     margin-bottom: 3rem;
     gap: 1.5rem;
