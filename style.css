@@ -57,45 +57,10 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    color: #f8f8f8;
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-
-.logo img {
-    height: 32px;
-    width: auto;
-    margin-right: 0.5rem;
-    /* Remove fundo branco e torna a logo branca */
-    filter: brightness(0) invert(1);
-    transition: all 0.3s ease;
-    /* Esconde se não carregar */
-    display: block;
-}
-
-.logo img:not([src]) {
-    display: none;
-}
-
-.logo:hover {
-    color: #a8a8a8;
-}
-
-.logo:hover img {
-    filter: brightness(0) invert(0.8);
-    transform: scale(1.05);
 }
 
 .nav-links {
@@ -149,34 +114,77 @@ nav {
     animation: fadeInUp 1s ease;
 }
 
-.hero h1 {
-    font-size: clamp(4rem, 12vw, 8rem);
-    margin-bottom: 1.5rem;
-    font-weight: 200;
-    letter-spacing: -2px;
-    color: #f8f8f8;
+.hero-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1.5rem;
+}
+
+.hero-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
     animation: fadeInUp 1.2s ease;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.1));
+}
+
+.hero-logo:hover {
+    transform: scale(1.05) translateY(-2px);
+    filter: drop-shadow(0 8px 20px rgba(255, 255, 255, 0.2));
+}
+
+.studio-name {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    margin: 0;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color: #f8f8f8;
+    animation: fadeInUp 1.2s ease 0.1s both;
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 50%, #d8d8d8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .hero-logo-container {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .hero-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .studio-name {
+        font-size: clamp(3rem, 8vw, 5.5rem);
+    }
 }
 
 .tagline {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     opacity: 0.7;
     font-weight: 300;
     letter-spacing: 1px;
-    animation: fadeInUp 1.2s ease 0.2s both;
+    animation: fadeInUp 1.2s ease 0.3s both;
 }
 
 .description {
     font-size: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     opacity: 0.6;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 300;
     line-height: 1.7;
-    animation: fadeInUp 1.2s ease 0.4s both;
+    animation: fadeInUp 1.2s ease 0.5s both;
 }
 
 .cta-buttons {
@@ -184,7 +192,7 @@ nav {
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    animation: fadeInUp 1.2s ease 0.6s both;
+    animation: fadeInUp 1.2s ease 0.7s both;
 }
 
 .btn {
@@ -402,12 +410,27 @@ nav {
         padding: 1rem 2rem;
     }
     
-    .logo img {
-        height: 28px;
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
-    .nav-links {
-        display: none;
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    
+    .hero-logo {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .studio-name {
+        font-size: clamp(2rem, 10vw, 3.5rem) !important;
+    }
+    
+    .hero-logo-container {
+        gap: 1rem !important;
     }
     
     .cta-buttons {
