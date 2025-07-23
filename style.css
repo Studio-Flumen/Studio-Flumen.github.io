@@ -68,14 +68,29 @@ nav {
     align-items: center;
     text-decoration: none;
     transition: all 0.3s ease;
+    color: #f8f8f8;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 .logo img {
     height: 32px;
     width: auto;
+    margin-right: 0.5rem;
     /* Remove fundo branco e torna a logo branca */
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
+    /* Esconde se não carregar */
+    display: block;
+}
+
+.logo img:not([src]) {
+    display: none;
+}
+
+.logo:hover {
+    color: #a8a8a8;
 }
 
 .logo:hover img {
