@@ -150,12 +150,6 @@ nav {
 }
 
 @media (min-width: 768px) {
-    .hero-logo-container {
-        flex-direction: row;
-        gap: 2rem;
-        align-items: center;
-    }
-    
     .hero-logo {
         width: 120px;
         height: 120px;
