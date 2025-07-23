@@ -71,9 +71,9 @@ nav {
 }
 
 .logo img {
-    height: 35px;
+    height: 32px;
     width: auto;
-    /* Remove fundo branco e inverte para branco */
+    /* Remove fundo branco e torna a logo branca */
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
 }
@@ -388,7 +388,7 @@ nav {
     }
     
     .logo img {
-        height: 30px;
+        height: 28px;
     }
     
     .nav-links {
